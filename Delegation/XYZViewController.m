@@ -37,7 +37,7 @@
         { NSLog(@"Cancel button clicked");
              self.view.backgroundColor = [UIColor clearColor];
            NSString *newMessage = @"You have no taste at all";
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:newMessage delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green", @"Blue",@"Random", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
             [alert show];            break;
         }
@@ -45,7 +45,7 @@
         {   NSLog(@"Red button clicked");
             self.view.backgroundColor = [UIColor redColor];
             NSString *newMessage = @"The background color now is Red";
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:newMessage delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green", @"Blue",@"Random", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
             [alert show];
             break; }
@@ -54,7 +54,7 @@
         {  NSLog(@"Green button clicked");
             self.view.backgroundColor = [UIColor greenColor];
             NSString *newMessage = @"The background color now is Green";
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:newMessage delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green", @"Blue",@"Random", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
             [alert show];
             break;
@@ -64,7 +64,8 @@
         {NSLog(@"Blue button clicked");
             self.view.backgroundColor = [UIColor blueColor];
             NSString *newMessage = @"The background color now is Blue";
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:newMessage delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green", @"Blue",@"Random", nil];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
             [alert show];
         break;
@@ -78,12 +79,10 @@
             self.view.backgroundColor = [colors objectAtIndex:i];
           
             NSString *newColor = [colors objectAtIndex:i];
-    
-         //   CGColorRef colorRef = self.CGColor;
-           // NSString *colorString = [CIColor colorWithCGColor:colorRef].stringRepresentation;
+
             NSString *newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor];
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:newMessage delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green", @"Blue",@"Random", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
             [alert show];
             break;
@@ -109,8 +108,13 @@
 
 //- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex
 
-//-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Background Color" message:@"Choose background color" delegate:self cancelButtonTitle:@"cancel" otherButtonTitles:@"Red",@"Green",@"Blue",@"Random",nil];
+    
+    [alert show];
 
+}
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
