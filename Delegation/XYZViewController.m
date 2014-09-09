@@ -79,8 +79,28 @@
             self.view.backgroundColor = [colors objectAtIndex:i];
           
             NSString *newColor = [colors objectAtIndex:i];
-
-            NSString *newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor];
+            
+            NSString *newMessage;
+            
+            if([newColor isEqual:[UIColor darkGrayColor]])
+            {
+                newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            else if ([newColor isEqual:[UIColor redColor]])
+            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor];}
+            else if ([newColor isEqual:[UIColor greenColor]])
+            {    newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            else if ([newColor isEqual:[UIColor blueColor]])
+            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            else if ([newColor isEqual:[UIColor cyanColor]])
+            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            else if ([newColor isEqual:[UIColor yellowColor]])
+            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            else if ([newColor isEqual:[UIColor magentaColor]])
+            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+    
+        
+            
+              // NSString *newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor];
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:newMessage delegate:self cancelButtonTitle:nil otherButtonTitles:nil];
             
