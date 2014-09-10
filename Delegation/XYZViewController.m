@@ -84,19 +84,19 @@
             
             if([newColor isEqual:[UIColor darkGrayColor]])
             {
-                newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+                newMessage = [NSString stringWithFormat:@"Background color now is Dark Gray"]; }
             else if ([newColor isEqual:[UIColor redColor]])
-            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor];}
+            {   newMessage = [NSString stringWithFormat:@"Background color now is Red" ];}
             else if ([newColor isEqual:[UIColor greenColor]])
-            {    newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            {    newMessage = [NSString stringWithFormat:@"Background color now is Green" ]; }
             else if ([newColor isEqual:[UIColor blueColor]])
-            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            {   newMessage = [NSString stringWithFormat:@"Background color now is Blue" ]; }
             else if ([newColor isEqual:[UIColor cyanColor]])
-            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            {   newMessage = [NSString stringWithFormat:@"Background color now is Cyan"  ]; }
             else if ([newColor isEqual:[UIColor yellowColor]])
-            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            {   newMessage = [NSString stringWithFormat:@"Background color now is Yellow"  ]; }
             else if ([newColor isEqual:[UIColor magentaColor]])
-            {   newMessage = [NSString stringWithFormat:@"Background color now is %@",newColor]; }
+            {   newMessage = [NSString stringWithFormat:@"Background color now is Magenta"  ]; }
     
         
             
